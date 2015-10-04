@@ -7,6 +7,8 @@
     <string name="action_settings">Settings</string>
     <string name="action_share">Share</string>
 
+    <string name="noInternet">Unable to connect to server</string>
+
     <string name="up">Up</string>
 
 </resources>

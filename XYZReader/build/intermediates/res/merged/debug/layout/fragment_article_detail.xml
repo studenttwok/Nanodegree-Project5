@@ -47,22 +47,19 @@
 
                     <TextView
                         android:id="@+id/article_title"
-                        style="?android:attr/textAppearanceLarge"
+                        style="@style/Theme.Bacon.HeadText"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
                         android:lineSpacingMultiplier="0.9"
                         android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
-                        android:textColor="#fff"
-                        android:textSize="@dimen/detail_title_text_size"
-                        android:textStyle="bold" />
+                        />
 
                     <TextView
                         android:id="@+id/article_byline"
-                        style="?android:attr/textAppearanceSmall"
+                        style="@style/Theme.Bacon.ByText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#8fff" />
+                         />
                 </LinearLayout>
 
             </LinearLayout>
@@ -82,6 +79,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:layout_collapseMode="pin"
+                app:elevation="@dimen/appbar_elevation"
                 app:navigationIcon="@drawable/ic_arrow_back" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
@@ -89,6 +87,7 @@
 
 
     <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedSV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
@@ -100,7 +99,7 @@
 
             <TextView
                 android:id="@+id/article_body"
-                style="@style/TextAppearance.AppCompat.Body1"
+                style="@style/TextAppearance.AppCompat.Body2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
@@ -108,6 +107,7 @@
                 android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
                 android:paddingTop="16dp"
                 android:paddingBottom="@dimen/detail_body_bottom_margin"
+                android:autoLink="all"
                 android:textSize="@dimen/detail_body_text_size" />
 
 
@@ -119,11 +119,12 @@
         android:id="@+id/share_fab"
         android:layout_width="56dp"
         android:layout_height="56dp"
+        android:layout_margin="8dp"
         android:layout_gravity="bottom|right"
         android:src="@android:drawable/ic_menu_share"
-        app:layout_anchor="@id/article_body"
+        app:layout_anchor="@id/nestedSV"
         app:layout_anchorGravity="bottom|right|end"
-        android:elevation="@dimen/fab_elevation"
+        app:elevation="@dimen/fab_elevation"
         android:contentDescription="@string/action_share" />
 
 </android.support.design.widget.CoordinatorLayout>
@@ -237,4 +238,4 @@
             android:contentDescription="@string/action_share" />
 
     </com.example.xyzreader.ui.DrawInsetsFrameLayout>
-    --><!-- From: file:/D:/NanodegreeProjects/xyzreader/XYZReader/src/main/res/layout/fragment_article_detail.xml -->
+    --><!-- From: file:/D:/NanodegreeProjects/Nanodegree-Project5/XYZReader/src/main/res/layout/fragment_article_detail.xml -->

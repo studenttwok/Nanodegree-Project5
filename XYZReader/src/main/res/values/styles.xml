@@ -26,6 +26,16 @@
         <item name="colorAccent">#00bcd4</item>
     </style>
 
+    <style name="Theme.Bacon.HeadText" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">@dimen/detail_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="Theme.Bacon.ByText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">#8fff</item>
+    </style>
 
 
     <!--

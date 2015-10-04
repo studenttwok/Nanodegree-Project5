@@ -17,6 +17,7 @@
             android:layout_height="?actionBarSize"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:layout_collapseMode="pin"
+            app:elevation="@dimen/appbar_elevation"
             app:navigationIcon="@drawable/ic_menu" />
 
     </android.support.design.widget.AppBarLayout>
@@ -25,6 +26,7 @@
         android:id="@+id/swipe_refresh_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:elevation="@dimen/refresh_elevation"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <android.support.v7.widget.RecyclerView
